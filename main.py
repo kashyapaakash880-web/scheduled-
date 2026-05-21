@@ -3,14 +3,14 @@ import os
 import smtplib
 
 MY_EMAIL = os.environ.get("MY_EMAIL")
-PASSWORD = os.environ.get("MY_PASSWORD")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 
-api_key = os.environ.get("API_KEY")
+API_KEY = os.environ.get("API_KEY")
 parameters = {
     'lat': 5.359952,
     'lon': -4.008256,
-    'appid': api_key,
+    'appid': API_KEY,
     'cnt': 4,
 }
 url = "https://api.openweathermap.org/data/2.5/forecast"
@@ -32,7 +32,7 @@ for item in weather_data["list"]:
 if will_rain:
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
-        connection.login(user=MY_EMAIL, password=PASSWORD)
+        connection.login(user=MY_EMAIL, password=MY_PASSWORD)
         connection.sendmail(
             from_addr=MY_EMAIL,
             to_addrs=MY_EMAIL,
