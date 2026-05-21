@@ -8,8 +8,8 @@ MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 API_KEY = os.environ.get("API_KEY")
 parameters = {
-    'lat': 5.359952,
-    'lon': -4.008256,
+    'lat': -6.175110,
+    'lon': 106.865036,
     'appid': API_KEY,
     'cnt': 4,
 }
