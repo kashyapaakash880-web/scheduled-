@@ -6,11 +6,11 @@ MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
 
-API_KEY = os.environ.get("API_KEY")
+api_key = os.environ.get("API_KEY")
 parameters = {
     'lat': -6.175110,
     'lon': 106.865036,
-    'appid': API_KEY,
+    'appid': api_key,
     'cnt': 4,
 }
 url = "https://api.openweathermap.org/data/2.5/forecast"
