@@ -30,7 +30,6 @@ for item in weather_data["list"]:
 
 
 if will_rain:
-    print("Bring your Umbrella !☔☔")
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
         connection.login(user=MY_EMAIL, password=PASSWORD)
