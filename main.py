@@ -36,8 +36,8 @@ if tuple_date in birthday_dict:
 
     new_letter = random_select.replace(PLACEHOLDER,birth_person['name'])
 
-    MY_EMAIL = os.environ.get(MY_EMAIL)
-    MY_PASSWORD = os.environ.get(MY_PASSWORD)
+    MY_EMAIL = os.environ.get("MY_EMAIL")
+    MY_PASSWORD = os.environ.get("MY_PASSWORD")
 
     # connect to Gmail server
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
