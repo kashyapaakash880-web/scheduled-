@@ -19,9 +19,10 @@ birthday_dict = { (data_row["day"],data_row["month"]):data_row for (index,data_r
 current_day = dt.datetime.now()
 tuple_date = (current_day.day, current_day.month)
 """name of birthday person  """
-birth_person = birthday_dict[tuple_date]
 
 if tuple_date in birthday_dict:
+
+    birth_person = birthday_dict[tuple_date]
 
     with open("letter_templates/letter_1.txt","r") as file:
         file_content = file.read()
