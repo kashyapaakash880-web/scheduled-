@@ -47,7 +47,7 @@ if tuple_date in birthday_dict:
         connection.sendmail(
             from_addr=MY_EMAIL,
             to_addrs=birth_person['email'],
-            msg=f"Subject: Happy Birthday Brother\n\n{new_letter}",
+            msg=f"Subject: Happy Birthday \n\n{new_letter}",
         )
 else:
     print("no birthday sorry ")
